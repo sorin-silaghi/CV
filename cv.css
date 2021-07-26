@@ -1,0 +1,165 @@
+:root {
+    --body-bg-color: #ccc;
+    --page-bg-color: #fff;
+    --title-text-color: rgba(0, 0, 0, 0.8);
+    --content-text-color: rgba(0, 0, 0, 0.8);
+  }
+
+/* latin */
+@font-face {
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Calibri Italic'), local('Calibri-Italic'), url(https://fonts.gstatic.com/l/font?kit=J7adnpV-BGlaFfdAhLQo6btP&skey=36a3d5758e0e2f58&v=v10) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'), url(https://fonts.gstatic.com/l/font?kit=J7aYnpV-BGlaFfdAhLQgUp5aHRge&skey=8b00183e5f6700b6&v=v10) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Calibri'), url(https://fonts.gstatic.com/l/font?kit=J7afnpV-BGlaFfdAhLEY6w&skey=a1029226f80653a8&v=v10) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Calibri Bold'), local('Calibri-Bold'), url(https://fonts.gstatic.com/l/font?kit=J7aanpV-BGlaFfdAjAo9_pxqHw&skey=cd2dd6afe6bf0eb2&v=v10) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@page {
+    size: 21cm 29.7cm;
+    margin: 10mm 0mm 10mm 0mm;
+}
+
+@media print {
+    .sub-section-row-content {
+        break-after: always;
+        page-break-after: always;
+    }
+  }
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--body-bg-color);
+}
+
+* {
+    font-family: "Calibri"
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    background: var(--page-bg-color);
+    width: 18cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-top: 15mm;
+    display:flex;
+}
+
+#name {
+    font-size: 12mm;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    flex: 1;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content {
+    margin-left: 6mm;
+    margin-right: 6mm;
+    margin-top: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    min-width: 120px;
+    max-width: 120px;
+    margin-right: 20px;
+    line-height: 26px;
+    text-align: end;
+    color: var(--title-text-color);
+}
+
+.section-title {
+    color: var(--title-text-color);
+    font-weight: bold;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.sub-section-title {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 20px;
+    color: var(--title-text-color);
+}
+
+.sub-section:first-child .sub-section-title {
+    margin-top: 0;
+}
+
+
+.sub-section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-section-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-section-row-title {
+    min-width: 55px;
+    max-width: 55px;
+    font-weight: bold;
+    color: var(--title-text-color);
+    white-space: nowrap;
+}
+
+.sub-section-row-content {
+    color: var(--content-text-color);
+}
