@@ -44,9 +44,8 @@
 }
 
 @media print {
-    .sub-section-row-content {
-        break-after: always;
-        page-break-after: always;
+    .sub-section {
+        page-break-inside: avoid;
     }
   }
 
@@ -162,4 +161,5 @@ body {
 
 .sub-section-row-content {
     color: var(--content-text-color);
+    text-align: justify;
 }
